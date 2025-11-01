@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.MainPage"
+             Title="Hotel Maui">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Bem-vindo ao Hotel Maui"
+                   Style="{StaticResource Headline}"
+                   HorizontalOptions="Center" />
+
+            <Label Text="O melhor conforto e hospitalidade para você."
+                   Style="{StaticResource SubHeadline}"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Contratar Hospedagem"
+                    BackgroundColor="#2E86C1"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="50"
+                    Clicked="OnContratarClicked" />
+
+            <Button x:Name="CounterBtn"
+                    Text="Reservar agora"
+                    BackgroundColor="#2E86C1"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="50"
+                    Clicked="OnCounterClicked" />
+
+            <Button Text="Sobre o App"
+                    BackgroundColor="#AED6F1"
+                    TextColor="#1A5276"
+                    CornerRadius="15"
+                    HeightRequest="50"
+                    Clicked="OnSobreClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

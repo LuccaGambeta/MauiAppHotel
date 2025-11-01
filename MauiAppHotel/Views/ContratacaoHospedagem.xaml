@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="Contratar Hospedagem">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="Contratação de Hospedagem"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="txtNome" Placeholder="Nome completo do hóspede" Keyboard="Text" />
+            <Entry x:Name="txtDias" Placeholder="Quantidade de dias" Keyboard="Numeric" />
+
+            <Picker x:Name="pckQuarto" Title="Tipo de quarto">
+                <Picker.Items>
+                    <x:String>Standard - R$100/dia</x:String>
+                    <x:String>Luxo - R$180/dia</x:String>
+                    <x:String>Suíte Master - R$250/dia</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Calcular e Contratar"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    CornerRadius="15"
+                    Clicked="Contratar_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
