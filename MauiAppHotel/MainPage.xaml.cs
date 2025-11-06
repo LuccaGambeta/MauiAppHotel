@@ -1,29 +1,27 @@
-﻿namespace MauiAppHotel
+﻿using MauiAppHotel.Views;
+
+namespace MauiAppHotel
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void AbrirContratacao_Clicked(object sender, EventArgs e)
         {
-            count++;
-            CounterBtn.Text = count == 1 ? $"Reservado {count} vez" : $"Reservado {count} vezes";
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            await Navigation.PushAsync(new ContratacaoHospedagem());
         }
 
-        private async void OnSobreClicked(object sender, EventArgs e)
+        private async void AbrirFotos_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.SobrePage());
+            await Navigation.PushAsync(new FotosPage());
         }
 
-        private async void OnContratarClicked(object sender, EventArgs e)
+        private async void AbrirSobre_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.ContratacaoHospedagem());
+            await Navigation.PushAsync(new SobrePage());
         }
     }
 }

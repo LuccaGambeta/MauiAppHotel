@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppHotel.Views.HospedagemContratada"
-             Title="Resumo da Hospedagem">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.HospedagemContratada"
+    Title="Hospedagem Confirmada">
 
-    <VerticalStackLayout Padding="30" Spacing="20">
+    <VerticalStackLayout Padding="30" Spacing="15" HorizontalOptions="Center">
 
-        <Label Text="Resumo da Contratação"
-               FontSize="22"
+        <Label Text="Hospedagem Confirmada!"
+               FontSize="26"
                FontAttributes="Bold"
+               TextColor="#1F618D"
                HorizontalOptions="Center" />
 
-        <Label x:Name="lblNome" FontSize="18" />
-        <Label x:Name="lblQuarto" FontSize="18" />
-        <Label x:Name="lblDias" FontSize="18" />
-        <Label x:Name="lblTotal" FontSize="18" FontAttributes="Bold" TextColor="Green" />
+        <Label x:Name="lblResumo"
+               FontSize="18"
+               TextColor="#2C3E50"
+               HorizontalTextAlignment="Center" />
 
-        <Button Text="Voltar" BackgroundColor="#512BD4" TextColor="White" CornerRadius="15" Clicked="Voltar_Clicked"/>
+        <Button Text="Voltar ao Início"
+                BackgroundColor="#27AE60"
+                TextColor="White"
+                CornerRadius="20"
+                Clicked="Voltar_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

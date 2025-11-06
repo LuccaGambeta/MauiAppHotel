@@ -7,25 +7,19 @@ namespace MauiAppHotel.Views
             InitializeComponent();
         }
 
-        private async void Contratar_Clicked(object sender, EventArgs e)
+        private async void ConfirmarHospedagem_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtDias.Text) || pckQuarto.SelectedIndex == -1)
+            string nome = entryNome.Text;
+            string dias = entryDias.Text;
+            string quarto = pickerQuarto.SelectedItem?.ToString();
+
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(dias) || quarto == null)
             {
-                await DisplayAlert("Atenção", "Preencha todos os campos antes de prosseguir.", "OK");
+                await DisplayAlert("Erro", "Por favor, preencha todos os campos.", "OK");
                 return;
             }
 
-            int dias = int.Parse(txtDias.Text);
-            double valorDiaria = pckQuarto.SelectedIndex switch
-            {
-                0 => 100,
-                1 => 180,
-                2 => 250,
-                _ => 0
-            };
-
-            double total = dias * valorDiaria;
-            await Navigation.PushAsync(new HospedagemContratada(txtNome.Text, pckQuarto.SelectedItem.ToString(), dias, total));
+            await Navigation.PushAsync(new HospedagemContratada(nome, dias, quarto));
         }
     }
 }

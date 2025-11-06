@@ -1,43 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppHotel.MainPage"
-             Title="Hotel Maui">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.MainPage"
+    Title="Hotel MAUI">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="Bem-vindo ao Hotel Maui"
-                   Style="{StaticResource Headline}"
+            <Label Text="🏨 Hotel MAUI"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="#1F618D"
                    HorizontalOptions="Center" />
 
-            <Label Text="O melhor conforto e hospitalidade para você."
-                   Style="{StaticResource SubHeadline}"
-                   HorizontalOptions="Center"
-                   HorizontalTextAlignment="Center" />
-
             <Button Text="Contratar Hospedagem"
-                    BackgroundColor="#2E86C1"
+                    BackgroundColor="#1F618D"
                     TextColor="White"
-                    CornerRadius="15"
-                    HeightRequest="50"
-                    Clicked="OnContratarClicked" />
+                    CornerRadius="20"
+                    Clicked="AbrirContratacao_Clicked" />
 
-            <Button x:Name="CounterBtn"
-                    Text="Reservar agora"
-                    BackgroundColor="#2E86C1"
+            <Button Text="Ver Galeria de Fotos"
+                    BackgroundColor="#2874A6"
                     TextColor="White"
-                    CornerRadius="15"
-                    HeightRequest="50"
-                    Clicked="OnCounterClicked" />
+                    CornerRadius="20"
+                    Clicked="AbrirFotos_Clicked" />
 
-            <Button Text="Sobre o App"
-                    BackgroundColor="#AED6F1"
-                    TextColor="#1A5276"
-                    CornerRadius="15"
-                    HeightRequest="50"
-                    Clicked="OnSobreClicked" />
-
+            <Button Text="Sobre"
+                    BackgroundColor="#117864"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Clicked="AbrirSobre_Clicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
+

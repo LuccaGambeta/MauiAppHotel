@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
-             Title="Contratar Hospedagem">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+    Title="Contratar Hospedagem">
 
     <ScrollView>
-        <VerticalStackLayout Padding="30" Spacing="20">
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="Contratação de Hospedagem"
-                   FontSize="24"
+            <Label Text="Formulário de Hospedagem"
+                   FontSize="26"
                    FontAttributes="Bold"
+                   TextColor="#1F618D"
                    HorizontalOptions="Center" />
 
-            <Entry x:Name="txtNome" Placeholder="Nome completo do hóspede" Keyboard="Text" />
-            <Entry x:Name="txtDias" Placeholder="Quantidade de dias" Keyboard="Numeric" />
+            <Entry x:Name="entryNome"
+                   Placeholder="Nome completo"
+                   BackgroundColor="#EAEDED"
+                   TextColor="Black" />
 
-            <Picker x:Name="pckQuarto" Title="Tipo de quarto">
+            <Entry x:Name="entryDias"
+                   Placeholder="Quantidade de dias"
+                   Keyboard="Numeric"
+                   BackgroundColor="#EAEDED"
+                   TextColor="Black" />
+
+            <Picker x:Name="pickerQuarto"
+                    Title="Selecione o tipo de quarto"
+                    BackgroundColor="#EAEDED"
+                    TextColor="Black">
                 <Picker.Items>
-                    <x:String>Standard - R$100/dia</x:String>
-                    <x:String>Luxo - R$180/dia</x:String>
-                    <x:String>Suíte Master - R$250/dia</x:String>
+                    <x:String>Standard - R$200/noite</x:String>
+                    <x:String>Luxo - R$350/noite</x:String>
+                    <x:String>Presidencial - R$500/noite</x:String>
                 </Picker.Items>
             </Picker>
 
-            <Button Text="Calcular e Contratar"
-                    BackgroundColor="#512BD4"
+            <Button Text="Confirmar Hospedagem"
+                    BackgroundColor="#1F618D"
                     TextColor="White"
-                    CornerRadius="15"
-                    Clicked="Contratar_Clicked"/>
-
+                    CornerRadius="20"
+                    Clicked="ConfirmarHospedagem_Clicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

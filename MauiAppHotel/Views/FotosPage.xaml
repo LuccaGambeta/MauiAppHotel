@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.FotosPage"
+    Title="Galeria de Fotos">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Image Source="https://images.unsplash.com/photo-1582719478170-2f0b04ec633f" 
+                   Aspect="AspectFill"
+                   HeightRequest="200" />
+            <Image Source="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                   Aspect="AspectFill"
+                   HeightRequest="200" />
+            <Image Source="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                   Aspect="AspectFill"
+                   HeightRequest="200" />
+            <Image Source="https://images.unsplash.com/photo-1501117716987-c8e1ecb210d5"
+                   Aspect="AspectFill"
+                   HeightRequest="200" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

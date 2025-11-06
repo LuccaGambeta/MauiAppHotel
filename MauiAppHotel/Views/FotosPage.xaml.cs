@@ -1,8 +1,8 @@
 namespace MauiAppHotel.Views
 {
-    public partial class SobrePage : ContentPage
+    public partial class FotosPage : ContentPage
     {
-        public SobrePage()
+        public FotosPage()
         {
             InitializeComponent();
         }
